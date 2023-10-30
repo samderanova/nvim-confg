@@ -41,12 +41,21 @@ function M.setup()
   vim.keymap.set("n", "<C-j>", "<C-w>j")
   vim.keymap.set("n", "<C-k>", "<C-w>k")
   vim.keymap.set("n", "<C-l>", "<C-w>l")
-  vim.keymap.set("n", "<leader>c", ":bd<CR>")
   vim.keymap.set("n", "<S-h>", ":bprev<CR>")
   vim.keymap.set("n", "<S-l>", ":bnext<CR>")
   vim.keymap.set("n", "<leader>f", ":Telescope grep_string<CR>")
   vim.keymap.set("n", "<leader>th", ":ToggleTerm size=15 direction=horizontal<CR>")
   vim.keymap.set("n", "<leader>tv", ":ToggleTerm size=40 direction=vertical<CR>")
+
+  -- restore the session for the current directory
+  vim.api.nvim_set_keymap("n", "<leader>qs", [[<cmd>lua require("persistence").load()<cr>]], {})
+
+  -- restore the last session
+  vim.api.nvim_set_keymap("n", "<leader>ql", [[<cmd>lua require("persistence").load({ last = true })<cr>]], {})
+
+  -- stop Persistence => session won't be saved on exit
+  vim.api.nvim_set_keymap("n", "<leader>qd", [[<cmd>lua require("persistence").stop()<cr>]], {})
+
 end
 
 return M

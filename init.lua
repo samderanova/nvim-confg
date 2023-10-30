@@ -42,6 +42,6 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=0 noexpandtab")
 vim.cmd("set shiftwidth=4")
-vim.cmd("set expandtab")
 vim.cmd("set clipboard=unnamedplus")

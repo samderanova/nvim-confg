@@ -23,7 +23,7 @@ return {
 							-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
 							-- on later neovim version, you should use vim.lsp.buf.format({ async = false }) instead
 
-							vim.lsp.buf.formatting_sync()
+							vim.lsp.buf.format({ bufnr = bufnr })
 						end,
 					})
 				end
