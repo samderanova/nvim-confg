@@ -77,6 +77,7 @@ function M.setup()
 	  { name = 'clangd' },
       { name = 'nvim_lsp' },
       { name = 'luasnip' },
+	  { name = 'rust-analyzer' }
     },
 
 

@@ -59,6 +59,8 @@ return {
 		  lspconfig.pyright.setup{}
 		  lspconfig.tsserver.setup{}
 		  lspconfig.clangd.setup{}
+		  lspconfig.rust_analyzer.setup{}
+		  lspconfig.cmake.setup{}
 
   end
 }
