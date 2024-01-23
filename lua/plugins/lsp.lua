@@ -61,6 +61,7 @@ return {
 		  lspconfig.clangd.setup{}
 		  lspconfig.rust_analyzer.setup{}
 		  lspconfig.cmake.setup{}
+		  lspconfig.svelte.setup{}
 
   end
 }
