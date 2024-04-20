@@ -62,6 +62,7 @@ return {
 		  lspconfig.rust_analyzer.setup{}
 		  lspconfig.cmake.setup{}
 		  lspconfig.svelte.setup{}
-
+		  lspconfig.jdtls.setup{}
+		  lspconfig.emmet_language_server.setup{}
   end
 }
